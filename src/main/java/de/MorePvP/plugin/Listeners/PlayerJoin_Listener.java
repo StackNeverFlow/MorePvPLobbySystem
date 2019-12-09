@@ -3,7 +3,6 @@ package de.MorePvP.plugin.Listeners;
 import de.MorePvP.plugin.API.LocationAPI;
 import de.MorePvP.plugin.Inventory.Gadgets_setInventory;
 import de.MorePvP.plugin.Lobby;
-import de.dytanic.cloudnet.bridge.CloudServer;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;

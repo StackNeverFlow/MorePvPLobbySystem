@@ -22,7 +22,7 @@ public class ChatFilter_Listener implements Listener {
         float uppercaseLatter = 0;
 
         if (message.equalsIgnoreCase("dies das ananas")) {
-            event.getPlayer().sendMessage("§b§lDie Devs sind da ;)");
+            event.getPlayer().sendMessage("§b§lDie Devs sind da ( ͡° ͜ʖ ͡°)");
         }
 
         for (int i = 0; i < message.length(); i++) {
