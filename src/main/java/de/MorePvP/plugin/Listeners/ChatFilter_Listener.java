@@ -1,11 +1,20 @@
 package de.MorePvP.plugin.Listeners;
 
+import de.MorePvP.plugin.Lobby;
 import de.MorePvP.plugin.Utils.STATICS;
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class ChatFilter_Listener implements Listener {
+
+    private Lobby main;
+
+    public ChatFilter_Listener(Lobby main) {
+        this.main = main;
+        Bukkit.getPluginManager().registerEvents(this, main);
+    }
 
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {

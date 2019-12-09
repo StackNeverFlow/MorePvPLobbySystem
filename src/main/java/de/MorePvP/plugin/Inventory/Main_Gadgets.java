@@ -24,9 +24,7 @@ public class Main_Gadgets implements Listener {
 
         inventory = Bukkit.createInventory(null, 9, "§6§lGadgets");
         inventory.setItem(0, new ItemAPI("§d§lEnder Perle", Material.ENDER_PEARL, (byte) 0, 1).build());
-        inventory.setItem(1, new ItemAPI("§f§lFire§c§lWork", Material.FIREWORK, (byte) 0, 1).build());
-        inventory.setItem(2, new ItemAPI("§b§lEnterhaken", Material.FISHING_ROD, (byte) 0, 1).build());
-        inventory.setItem(3, new ItemAPI("§a§lJumpBoost", Material.FEATHER, (byte) 0, 1).build());
+        inventory.setItem(1, new ItemAPI("§a§lJumpBoost", Material.FEATHER, (byte) 0, 1).build());
         inventory.setItem(8, new ItemAPI("§c§lKein Gadget", Material.BARRIER, (byte) 0, 1).build());
     }
 

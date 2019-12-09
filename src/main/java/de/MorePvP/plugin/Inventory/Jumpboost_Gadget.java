@@ -5,6 +5,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Material;
 import org.bukkit.Sound;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -19,16 +20,16 @@ public class Jumpboost_Gadget implements Listener {
         Bukkit.getPluginManager().registerEvents(this, main);
     }
 
+    @EventHandler
     public void onInteract(final PlayerInteractEvent event) {
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 
             if (event.getItem().getType() == Material.FEATHER) {
 
-                Vector vector = event.getPlayer().getVelocity();
-                vector.setY(2.1D);
+                event.getPlayer().setVelocity(event.getPlayer().getLocation().getDirection().multiply(+2));
 
                 event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENDERDRAGON_WINGS, 3, 1);
-                event.getPlayer().playEffect(event.getPlayer().getLocation(), Effect.ENDER_SIGNAL, 3);
+                event.getPlayer().playEffect(event.getPlayer().getLocation(), Effect.LAVA_POP, 3);
             }
         }
     }

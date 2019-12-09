@@ -1,6 +1,8 @@
 package de.MorePvP.plugin.Events;
 
 import de.MorePvP.plugin.Inventory.Gadgets_setInventory;
+import de.MorePvP.plugin.Lobby;
+import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,6 +14,13 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerGameModeChangeEvent;
 
 public class Inventory_Events implements Listener {
+
+    private Lobby main;
+
+    public Inventory_Events(Lobby main) {
+        this.main = main;
+        Bukkit.getPluginManager().registerEvents(this, main);
+    }
 
     @EventHandler
     public void onDrag(final InventoryDragEvent event) {
