@@ -25,9 +25,9 @@ public class Profil_Inventory implements Listener {
 
         profileInventory = Bukkit.createInventory(null, 9, "§6§lDein Profil");
 
-        profileInventory.setItem(1, new ItemAPI("§6§lHüte", Material.CHAINMAIL_HELMET, (byte) 0, 1).build());
+        profileInventory.setItem(4, new ItemAPI("§6§lHüte", Material.LEATHER_HELMET, (byte) 0, 1).build());
 
-        hatsInventory = Bukkit.createInventory(null, 27, "§6§lHüte");
+        hatsInventory = Bukkit.createInventory(null, 36, "§6§lHüte");
         hatsInventory.addItem(new ItemAPI("§f§lKettenhelm", Material.CHAINMAIL_HELMET, (byte) 0, 1).build());
         hatsInventory.addItem(new ItemAPI("§d§lDiamanthelm", Material.DIAMOND_HELMET, (byte) 0, 1).build());
         hatsInventory.addItem(new ItemAPI("§e§lGlas", Material.GLASS, (byte) 0, 1).build());
@@ -45,9 +45,11 @@ public class Profil_Inventory implements Listener {
         hatsInventory.addItem(new ItemAPI("§5§lObsid§d§lian", Material.OBSIDIAN, (byte) 0, 1).build());
         hatsInventory.addItem(new ItemAPI("§c§lNetherrack", Material.NETHERRACK, (byte) 0, 1).build());
         hatsInventory.addItem(new ItemAPI("§c§lRote§4§lSand§c§lStufe", Material.RED_SANDSTONE_STAIRS, (byte) 0, 1).build());
-        hatsInventory.addItem(new ItemAPI("§7§lErde", Material.DIRT, (byte) 0, 1).build());
+        hatsInventory.addItem(new ItemAPI("§0§lErde", Material.DIRT, (byte) 0, 1).build());
+        hatsInventory.addItem(new ItemAPI("§d§lBug§e§lBlock", Material.BURNING_FURNACE, (byte) 0, 1).build());
+        hatsInventory.addItem(new ItemAPI("§7§lOfen", Material.FURNACE, (byte) 0, 1).build());
 
-        hatsInventory.setItem(26, new ItemAPI("§c§lHelme ablegen", Material.BARRIER, (byte) 0, 1).build());
+        hatsInventory.setItem(35, new ItemAPI("§c§lHelme ablegen", Material.BARRIER, (byte) 0, 1).build());
     }
 
     @EventHandler
