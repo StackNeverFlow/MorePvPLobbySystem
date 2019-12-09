@@ -24,7 +24,8 @@ public class Main_Gadgets implements Listener {
 
         inventory = Bukkit.createInventory(null, 9, "§6§lGadgets");
         inventory.setItem(0, new ItemAPI("§d§lEnder Perle", Material.ENDER_PEARL, (byte) 0, 1).build());
-        inventory.setItem(1, new ItemAPI("§a§lJumpBoost", Material.FEATHER, (byte) 0, 1).build());
+        inventory.setItem(1, new ItemAPI("§3§lEnterhaken", Material.FISHING_ROD, (byte) 0, 1).build());
+        inventory.setItem(2, new ItemAPI("§a§lJumpBoost", Material.FEATHER, (byte) 0, 1).build());
         inventory.setItem(8, new ItemAPI("§c§lKein Gadget", Material.BARRIER, (byte) 0, 1).build());
     }
 
@@ -48,7 +49,7 @@ public class Main_Gadgets implements Listener {
                 } else if (material == Material.FIREWORK) {
                     player.getInventory().setItem(4, new ItemAPI("§f§lFire§c§lWork", Material.FIREWORK, (byte) 0, 1).build());
                 } else if (material == Material.FISHING_ROD) {
-                    player.getInventory().setItem(4, new ItemAPI("§b§lEnterhaken", Material.FISHING_ROD, (byte) 0, 1).build());
+                    player.getInventory().setItem(4, new ItemAPI("§3§lEnterhaken", Material.FISHING_ROD, (byte) 0, 1).build());
                 } else if (material == Material.BARRIER) {
                     player.getInventory().setItem(4, new ItemAPI("§c§lKein Gadget ausgewählt", Material.BARRIER, (byte) 0, 1).build());
                 } else if (material == Material.FEATHER) {

@@ -10,9 +10,9 @@ public class LocationAPI {
         Location location = player.getLocation();
 
         location.setWorld(Bukkit.getWorld("lobby"));
-        location.setX(-28.500);
-        location.setY(21);
-        location.setZ(22.5);
+        location.setX(-1919.5);
+        location.setY(122);
+        location.setZ(-883.5);
 
         player.teleport(location);
     }
