@@ -1,6 +1,7 @@
 package de.MorePvP.plugin.Listeners;
 
 import de.MorePvP.plugin.API.ItemAPI;
+import de.MorePvP.plugin.Lobby;
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Material;
@@ -17,6 +18,13 @@ import java.util.List;
 
 public class PlayerHide_Listener implements Listener {
     public List<Player> hide = new ArrayList<>();
+
+    private Lobby main;
+
+    public PlayerHide_Listener(Lobby main) {
+        this.main = main;
+        Bukkit.getPluginManager().registerEvents(this, main);
+    }
 
     @EventHandler
     public void onInteract(PlayerInteractEvent event) {

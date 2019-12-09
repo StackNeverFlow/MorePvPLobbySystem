@@ -1,3 +1,4 @@
 name: Lobby
 author: StackNeverFlow
 version: 1.0.1
+main: de.MorePvP.plugin.Lobby
