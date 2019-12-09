@@ -21,8 +21,8 @@ public class ChatFilter_Listener implements Listener {
         final String message = event.getMessage().trim();
         float uppercaseLatter = 0;
 
-        if (message.equalsIgnoreCase("dies das ananas")) {
-            event.getPlayer().sendMessage("§b§lDie Devs sind da ;)");
+        if (message.equalsIgnoreCase("dies das ananas") || message.equalsIgnoreCase("lets go der hase")) {
+            event.getPlayer().sendMessage("§b§l☕ Die Devs sind da ( ͡° ͜ʖ ͡°)");
         }
 
         for (int i = 0; i < message.length(); i++) {

@@ -2,6 +2,7 @@ package de.MorePvP.plugin.Listeners;
 
 import de.MorePvP.plugin.API.ItemAPI;
 import de.MorePvP.plugin.Lobby;
+import de.MorePvP.plugin.Utils.STATICS;
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Material;
@@ -40,6 +41,7 @@ public class PlayerHide_Listener implements Listener {
                 event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.EXPLODE, 3, 1);
                 event.getPlayer().getInventory().setItem(2, new ItemAPI("§6§lSpieler anzeigen", Material.BLAZE_ROD, (byte) 0, 1).build());
                 event.getPlayer().updateInventory();
+                event.getPlayer().sendMessage(STATICS.PREFIX + "Alle Spieler sind nun versteckt");
             } else if (event.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lSpieler anzeigen")) {
                 hide.remove(event.getPlayer());
                 Bukkit.getOnlinePlayers().forEach(p -> {
@@ -51,6 +53,7 @@ public class PlayerHide_Listener implements Listener {
                 event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.EXPLODE, 3, 1);
                 event.getPlayer().getInventory().setItem(2, new ItemAPI("§6§lSpieler verstecken", Material.STICK, (byte) 0, 1).build());
                 event.getPlayer().updateInventory();
+                event.getPlayer().sendMessage(STATICS.PREFIX + "Alle Spieler werden nun wieder angezeigt");
 
             }
         }
