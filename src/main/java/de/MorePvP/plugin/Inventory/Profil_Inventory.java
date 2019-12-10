@@ -67,7 +67,7 @@ public class Profil_Inventory implements Listener {
             Player player = (Player) event.getWhoClicked();
             if (event.getCurrentItem() != null && event.getCurrentItem().getType() != Material.AIR) {
                 Material material = event.getCurrentItem().getType();
-                if (material == Material.CHAINMAIL_HELMET) {
+                if (material == Material.LEATHER_HELMET) {
                     player.openInventory(hatsInventory);
                     player.playSound(player.getLocation(), Sound.ITEM_PICKUP, 3, 1);
                     event.setCancelled(true);

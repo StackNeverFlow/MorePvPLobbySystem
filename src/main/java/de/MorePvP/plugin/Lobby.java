@@ -23,6 +23,7 @@ public class Lobby extends JavaPlugin {
         new Firework_Gadget(this);
         new de.StackNeverFlow.plugin.Inventory.Enderpearl_Gadget(this);
         new Enterhaken_Gadget(this);
+        new Navigator_Gadget(this);
 
     }
 
