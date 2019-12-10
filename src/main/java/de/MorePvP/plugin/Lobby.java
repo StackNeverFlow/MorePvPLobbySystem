@@ -1,6 +1,7 @@
 package de.MorePvP.plugin;
 
 import de.MorePvP.plugin.Events.Inventory_Events;
+import de.MorePvP.plugin.Handler.Scoreboard_Handler;
 import de.MorePvP.plugin.Inventory.*;
 import de.MorePvP.plugin.Listeners.ChatFilter_Listener;
 import de.MorePvP.plugin.Listeners.PlayerHide_Listener;
@@ -10,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Lobby extends JavaPlugin {
 
     public void onEnable() {
+        new Scoreboard_Handler().startAnimation();
 
         new ChatFilter_Listener(this);
         new PlayerHide_Listener(this);

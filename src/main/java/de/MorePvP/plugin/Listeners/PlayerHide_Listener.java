@@ -20,6 +20,8 @@ import java.util.List;
 public class PlayerHide_Listener implements Listener {
     public List<Player> hide = new ArrayList<>();
 
+    //Braustand inv vip group perms
+
     private Lobby main;
 
     public PlayerHide_Listener(Lobby main) {
