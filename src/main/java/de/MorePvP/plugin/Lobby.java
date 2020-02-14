@@ -1,6 +1,7 @@
 package de.MorePvP.plugin;
 
 import de.MorePvP.plugin.Events.Inventory_Events;
+import de.MorePvP.plugin.Events.Player_Events;
 import de.MorePvP.plugin.Handler.Scoreboard_Handler;
 import de.MorePvP.plugin.Inventory.*;
 import de.MorePvP.plugin.Listeners.ChatFilter_Listener;
@@ -16,14 +17,13 @@ public class Lobby extends JavaPlugin {
         new ChatFilter_Listener(this);
         new PlayerHide_Listener(this);
         new PlayerJoin_Listener(this);
-        new de.StackNeverFlow.plugin.Events.Player_Events(this);
+        new Player_Events(this);
         new Inventory_Events(this);
 
         new Profil_Inventory(this);
         new Main_Gadgets(this);
         new Jumpboost_Gadget(this);
         new Firework_Gadget(this);
-        new de.StackNeverFlow.plugin.Inventory.Enderpearl_Gadget(this);
         new Enterhaken_Gadget(this);
         new Navigator_Gadget(this);
 

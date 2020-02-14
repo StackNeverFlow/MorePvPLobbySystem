@@ -32,7 +32,7 @@ public class PlayerHide_Listener implements Listener {
     @EventHandler
     public void onInteract(PlayerInteractEvent event) {
         if (event.getItem() != null) {
-            if (event.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lSpieler verstecken")) {
+            if (event.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§8» §cSpieler verstecken")) {
                 hide.add(event.getPlayer());
                 Bukkit.getOnlinePlayers().forEach(p -> {
                     if (event.getPlayer() != p) {
@@ -41,7 +41,7 @@ public class PlayerHide_Listener implements Listener {
                     }
                 });
                 event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.EXPLODE, 3, 1);
-                event.getPlayer().getInventory().setItem(2, new ItemAPI("§6§lSpieler anzeigen", Material.BLAZE_ROD, (byte) 0, 1).build());
+                event.getPlayer().getInventory().setItem(2, new ItemAPI("§8» §cSpieler verstecken", Material.BLAZE_ROD, (byte) 0, 1).build());
                 event.getPlayer().updateInventory();
                 event.getPlayer().sendMessage(STATICS.PREFIX + "Alle Spieler sind nun versteckt");
             } else if (event.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§6§lSpieler anzeigen")) {
