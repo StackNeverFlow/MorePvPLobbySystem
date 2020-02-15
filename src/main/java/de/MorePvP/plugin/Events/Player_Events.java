@@ -1,4 +1,4 @@
-package de.StackNeverFlow.plugin.Events;
+package de.MorePvP.plugin.Events;
 
 import de.MorePvP.plugin.Lobby;
 import org.bukkit.Bukkit;
@@ -7,6 +7,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
+import org.bukkit.event.player.PlayerChatTabCompleteEvent;
+
+import java.util.Arrays;
 
 public class Player_Events implements Listener {
 
@@ -19,8 +22,8 @@ public class Player_Events implements Listener {
 
     @EventHandler
     public void onFoodLevel(FoodLevelChangeEvent event) {
-        event.setFoodLevel(20);
         event.setCancelled(true);
+        event.setFoodLevel(20);
     }
 
     @EventHandler
@@ -29,6 +32,12 @@ public class Player_Events implements Listener {
             event.setDamage(0);
             event.setCancelled(true);
         }
+    }
+
+    @EventHandler
+    public void onTab(PlayerChatTabCompleteEvent event) {
+        event.getTabCompletions().clear();
+        event.getTabCompletions().addAll(Arrays.asList("ts", "friend", "clan", "party"));
     }
 
 }

@@ -20,10 +20,10 @@ public class Jumpboost_Gadget implements Listener {
     }
 
     @EventHandler
-    public void onInteract(final PlayerInteractEvent event) {
+    public void onInteractFeather(final PlayerInteractEvent event) {
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-
-            if (event.getItem().getType() == Material.FEATHER) {
+            if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK)
+                if (event.getItem().getType() == Material.FEATHER) {
 
                 event.getPlayer().setVelocity(event.getPlayer().getLocation().getDirection().multiply(+2));
 

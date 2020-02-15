@@ -1,6 +1,7 @@
 package de.MorePvP.plugin.Listeners;
 
 import de.MorePvP.plugin.API.LocationAPI;
+import de.MorePvP.plugin.Handler.Scoreboard_Handler;
 import de.MorePvP.plugin.Inventory.Gadgets_setInventory;
 import de.MorePvP.plugin.Lobby;
 import org.bukkit.Bukkit;
@@ -20,6 +21,8 @@ public class PlayerJoin_Listener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(final PlayerJoinEvent event) {
+        new Scoreboard_Handler().setScoreboard(event.getPlayer());
+
         event.setJoinMessage(null);
 
         event.getPlayer().getInventory().clear();
